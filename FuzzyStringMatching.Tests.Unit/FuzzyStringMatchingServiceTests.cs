@@ -7,12 +7,12 @@ using Moq;
 namespace FuzzyStringMatching.Tests.Unit
 {
     [TestClass]
-    public class FuzzyStringComparerServiceTests
+    public class FuzzyStringMatchingServiceTests
     {
 
         private Mock<IFuzzyComparerFactory> factoryMock;
         private Mock<IFuzzyComparerStrategy> strategyMock;
-        private FuzzyStringComparerService fuzzyStringComparer;
+        private FuzzyStringMatchingService fuzzyStringComparer;
 
         [TestInitialize]
         public void Initialize()
@@ -22,7 +22,7 @@ namespace FuzzyStringMatching.Tests.Unit
 
             factoryMock.Setup(f => f.GetFuzzyComparer(It.IsAny<FuzzyStringComparerType>())).Returns(strategyMock.Object);
 
-            fuzzyStringComparer = new FuzzyStringComparerService(factoryMock.Object);
+            fuzzyStringComparer = new FuzzyStringMatchingService(factoryMock.Object);
         }
 
         [TestMethod]

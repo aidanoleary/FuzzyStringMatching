@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace FuzzyStringMatching
 {
-    public class FuzzyStringComparerService
+    public class FuzzyStringMatchingService
     {
         private IFuzzyComparerFactory fuzzyComparerFactory;
 
-        public FuzzyStringComparerService()
+        public FuzzyStringMatchingService()
         {
             this.fuzzyComparerFactory = new FuzzyComparerFactory();
         }
 
-        public FuzzyStringComparerService(IFuzzyComparerFactory fuzzyComparerFactory)
+        public FuzzyStringMatchingService(IFuzzyComparerFactory fuzzyComparerFactory)
         {
             this.fuzzyComparerFactory = fuzzyComparerFactory;
         }
