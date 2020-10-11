@@ -10,7 +10,8 @@ The FuzzyStringMatching library can be installed from Nuget https://www.nuget.or
 ```csharp
 
 FuzzyStringMatchingService fuzzyService = new FuzzyStringMatchingService();
-fuzzyService.CompareStrings(FuzzyStringComparerType.LevenshteinDistance, inputOne, inputTwo); // returns 5
+
+fuzzyService.CompareStrings(FuzzyStringComparerType.LevenshteinDistance, "hello", "helloworld"); // returns 5 (Levenshtein Edit distance)
 fuzzyService.CompareStrings(FuzzyStringComparerType.LevenshteinDistancePercentage, "hello", "helloworld"); // returns 50 (The similarity percentage)
 
 
