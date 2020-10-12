@@ -5,6 +5,10 @@ FuzzyStringMatching is a library for performing fuzzy matching on strings.
 ## Installation
 The FuzzyStringMatching library can be installed from Nuget https://www.nuget.org/packages/AidanOleary.FuzzyStringMatching/.
 
+```bash
+Install-Package AidanOleary.FuzzyStringMatching -Version 1.0.0
+```
+
 ## Usage
 
 ```csharp
